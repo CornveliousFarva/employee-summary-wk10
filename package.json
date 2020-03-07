@@ -1,0 +1,22 @@
+{
+  "name": "employee-summary-wk10",
+  "version": "1.0.0",
+  "description": "An app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CornveliousFarva/employee-summary-wk10.git"
+  },
+  "author": "Greg Schuman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CornveliousFarva/employee-summary-wk10/issues"
+  },
+  "homepage": "https://github.com/CornveliousFarva/employee-summary-wk10#readme",
+  "dependencies": {
+    "inquirer": "^7.0.6"
+  }
+}

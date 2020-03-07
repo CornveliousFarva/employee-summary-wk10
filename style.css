@@ -8,3 +8,31 @@ header{
     background-color: aquamarine;
     color: red;
 }
+
+.jumbotron {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    background-color: #e9ecef;
+    border-radius: .3rem;
+    background-image: linear-gradient(45deg, black, orange);
+    color: white;
+}
+
+.card-header{
+    color: red
+}
+
+.intern-card-header{
+    background-color: green;
+    color:white;
+}
+
+.engineer-card-header{
+    background-color: dodgerblue;
+    color:white;
+}
+
+.manager-card-header{
+    background-color: black;
+    color: white;
+}
