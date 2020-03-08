@@ -1,4 +1,4 @@
-const requireInfo = require("./employee")
+const requireInfo = require("./engineer")
 
 let engineerInfo = class extends requireInfo{
     constructor(name, id, email, github){
