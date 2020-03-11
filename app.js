@@ -30,73 +30,71 @@ function createTeam(){
             createEngineer()
         }
         else if (userChoice.memberChoice === "Intern"){
-            createManager()
+            createIntern()
         }
-    }
-        )
-        createTeam ()
+    })
 }
-function createEmployee(){
-    //Prompt to create manager
-    function createManager(){
-        inquirer.prompt([
-            {
-                type: "input",
-                name: "managerName",
-                message: "What is the name of the manager?"
-            },
-            {
-                type: "input",
-                name: "managerID",
-                message: "What is the manager's ID number?"
-            },
-            {
-                type: "input",
-                name: "managerEmail",
-                message: "What is the manager's email address?"
-            },
-            {
-                type: "input",
-                name: "managerOfficeNumber",
-                message: "What is the manager's office number?"
-            }
-        ]).then(function(answers){
-            const manager = new manager(answers.managerName, answers.managerID, answers.managerEmail, answers.managerOfficeNumber); teamMembers.push(manager);
-            idArray.push(answers.createmanager);
-            console.log(teamMembers)
-            createTeam();
-    },
-    createManager(),
+//Prompt to create manager
+function createManager(){
+    inquirer.prompt([
+        {
+            type: "input",
+            name: "managerName",
+            message: "What is the name of the manager?"
+        },
+        {
+            type: "input",
+            name: "managerID",
+            message: "What is the manager's ID number?"
+        },
+        {
+            type: "input",
+            name: "managerEmail",
+            message: "What is the manager's email address?"
+        },
+        {
+            type: "input",
+            name: "managerOfficeNumber",
+            message: "What is the manager's office number?"
+        }
+    ]).then(function(answers){
+        const manager = new manager(answers.managerName, answers.managerID, answers.managerEmail, answers.managerOfficeNumber); teamMembers.push(manager);
+        idArray.push(answers.createmanager);
+        console.log(teamMembers)
+        createTeam();
+    })
+}
+
     //Prompt to create engineer
-    function createEngineer(){
-        inquirer.prompt([
-            {
-                type: "input",
-                name: "engineerName",
-                message: "What is the name of this engineer?"
-            },
-            {
-                type: "input",
-                name: "engineerID",
-                message: "What is the ID number of this engineer?"
-            },
-            {
-                type: "input",
-                name: "engineerEmail",
-                message: "What is this engineer's email?"
-            },
-            {
-                type: "input",
-                name: "engineerGitHub",
-                message: "What is this engineer's GitHub?"
-            }
-        ]).then(function(answers){
-            const engineer = new engineer(answers.engineerName, answers.engineerID, answers.engineerEmail, answers.engineerGitHub); teamMembers.push(engineer);
-            idArray.push(answers.createEngineer);
-            console.log(teamMembers)
-            createTeam();
-    },
-    createEngineer(),
+function createEngineer(){
+    inquirer.prompt([
+        {
+            type: "input",
+            name: "engineerName",
+            message: "What is the name of this engineer?"
+        },
+        {
+            type: "input",
+            name: "engineerID",
+            message: "What is the ID number of this engineer?"
+        },
+        {
+            type: "input",
+            name: "engineerEmail",
+            message: "What is this engineer's email?"
+        },
+        {
+            type: "input",
+            name: "engineerGitHub",
+            message: "What is this engineer's GitHub?"
+        }
+    ]).then(function(answers){
+        const engineer = new engineer(answers.engineerName, answers.engineerID, answers.engineerEmail, answers.engineerGitHub); teamMembers.push(engineer);
+        idArray.push(answers.createEngineer);
+        console.log(teamMembers)
+        createTeam();
+    })
+}
     //Prompt to create intern
     function createIntern(){
         inquirer.prompt([
@@ -126,17 +124,13 @@ function createEmployee(){
             console.log(teamMembers)
             createTeam();
         })
-    },
-    createIntern()        
-    },
-​createEmployee(),
- 
+    }       
+
+    createTeam();
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
 // generate and return a block of HTML including templated divs for each employee!
 
-
-​
 // After you have your html, you're no ready to create an HTML file using the HTML
 // returned from the `render` function. Now write it to a file named `team.html` in the
 // `output` folder. You can use the variable `outputPath` above target this location.

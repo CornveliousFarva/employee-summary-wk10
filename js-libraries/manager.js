@@ -1,6 +1,6 @@
-const requireInfo = require("./manager")
+const employee = require("./employee")
 
-let managerInfo = class extends requireInfo{
+let managerInfo = class extends employee{
     constructor(name, id, email, officeNumber){
         super(name, id, email)
         this.officeNumber = officeNumber
